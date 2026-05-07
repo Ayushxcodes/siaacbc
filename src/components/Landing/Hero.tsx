@@ -107,7 +107,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="flex h-[100svh] flex-col overflow-hidden bg-white lg:border lg:border-slate-200 lg:shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
+    <section className="flex h-[100svh] flex-col overflow-hidden bg-stone-50 lg:border lg:border-stone-200 lg:shadow-xl lg:shadow-stone-100">
       <nav className="flex items-center justify-between border-b border-slate-200 px-5 py-4 md:px-8">
         <Image
           src="/logo.png"
@@ -124,7 +124,7 @@ export default function HeroSection() {
               key={link.label}
               href="#"
               className={`text-[16px] font-medium tracking-[0.12em] transition-colors ${
-                link.active ? "text-slate-900" : "text-slate-500 hover:text-slate-900"
+                link.active ? "text-zinc-900" : "text-zinc-600 hover:text-zinc-900"
               }`}
             >
               {link.label}
@@ -133,11 +133,11 @@ export default function HeroSection() {
         </div>
 
         <div className="flex items-center gap-4">
-          <button className="hidden items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-50 sm:flex">
+          <button className="hidden items-center gap-2 rounded-2xl border border-stone-200 bg-white px-5 py-3 text-sm font-medium text-zinc-800 shadow-sm transition hover:bg-stone-50 sm:flex">
             <PhoneCall size={16} weight="bold" />
             Contact
           </button>
-          <button className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-5 py-3 text-sm font-medium text-white transition hover:bg-slate-800">
+          <button className="inline-flex items-center gap-2 rounded-2xl bg-amber-700 px-5 py-3 text-sm font-medium text-white transition hover:bg-amber-600">
             <Heart size={16} weight="bold" />
             Donate
           </button>
@@ -146,7 +146,7 @@ export default function HeroSection() {
 
       <div className="grid flex-1 min-h-0 grid-cols-1 lg:grid-cols-2">
         
-        <div className="relative min-h-[38svh] overflow-hidden bg-slate-100 lg:min-h-0">
+        <div className="relative min-h-[38svh] overflow-hidden bg-stone-100 lg:min-h-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.45),_transparent_32%),radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.3),_transparent_34%)]" />
           <div className="relative h-full min-h-0 w-full">
             <SlidePortrait slide={slide} />
@@ -156,25 +156,25 @@ export default function HeroSection() {
         <div className="relative flex min-h-0 items-center px-5 py-6 md:px-8 lg:px-12 lg:py-8">
           <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(248,250,252,0.9),rgba(255,255,255,1)_30%,rgba(248,250,252,0.88))]" />
           <div className="relative z-10 max-w-xl">
-            <div className={`inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] ${slide.textAccent} shadow-sm`}>
+            <div className={`inline-flex items-center gap-2 rounded-full border border-stone-200 bg-white px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] ${slide.textAccent} shadow-sm`}>
               <CaretRight size={12} weight="bold" />
               {slide.eyebrow}
             </div>
 
-            <h1 className="mt-5 text-3xl font-semibold leading-tight text-slate-950 md:text-5xl lg:text-6xl">
+            <h1 className="mt-5 text-3xl leading-tight text-zinc-900 md:text-5xl lg:text-6xl">
               {slide.title}
             </h1>
 
-            <p className="mt-4 max-w-xl text-sm leading-7 text-slate-600 md:text-base md:leading-8 lg:text-lg">
+            <p className="mt-4 max-w-xl text-sm leading-7 text-zinc-700 md:text-base md:leading-8 lg:text-lg">
               {slide.summary}
             </p>
 
             <div className="mt-6 flex items-center gap-4">
-              <div className="h-px flex-1 bg-slate-200" />
+              <div className="h-px flex-1 bg-stone-200" />
               <button
                 type="button"
                 onClick={() => setActiveSlide((current) => (current - 1 + slides.length) % slides.length)}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 transition hover:bg-slate-50"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-stone-200 bg-white text-zinc-800 shadow-sm transition hover:bg-stone-50"
                 aria-label="Previous slide"
               >
                 <ArrowLeft size={18} weight="bold" />
@@ -182,7 +182,7 @@ export default function HeroSection() {
               <button
                 type="button"
                 onClick={() => setActiveSlide((current) => (current + 1) % slides.length)}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-slate-900 text-white transition hover:bg-slate-800"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-amber-700 text-white transition hover:bg-amber-600"
                 aria-label="Next slide"
               >
                 <ArrowRight size={18} weight="bold" />
@@ -199,7 +199,7 @@ export default function HeroSection() {
                   onClick={() => setActiveSlide(index)}
                   aria-label={`Go to slide ${index + 1}`}
                   className={`h-2 rounded-full transition-all duration-300 ${
-                    index === activeSlide ? "w-10 bg-slate-900" : "w-2 bg-slate-300 hover:bg-slate-400"
+                    index === activeSlide ? "w-10 bg-amber-700" : "w-2 bg-stone-300 hover:bg-stone-400"
                   }`}
                 />
               ))}

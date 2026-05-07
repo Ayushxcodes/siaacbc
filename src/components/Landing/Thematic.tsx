@@ -11,18 +11,18 @@ interface AreaProps {
 const AreaCard = ({ title, description, Icon, href }: AreaProps) => (
   <a 
     href={href}
-    className="group relative flex flex-col items-center rounded-2xl border border-slate-100 bg-white p-8 text-center transition-all duration-300 hover:border-transparent hover:shadow-2xl hover:shadow-slate-200/60"
+    className="group relative flex flex-col items-center rounded-3xl border border-stone-200 bg-white p-8 text-center transition-all duration-300 hover:border-transparent hover:shadow-xl"
   >
     {/* Icon Container */}
-    <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-50 text-amber-600 transition-colors duration-300 group-hover:bg-amber-600 group-hover:text-white">
+    <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-50 text-amber-600 transition-colors duration-300 group-hover:bg-amber-600 group-hover:text-white shadow-sm">
       <Icon size={32} strokeWidth={1.5} />
     </div>
 
     {/* Content */}
-    <h3 className="mb-3 text-xl font-bold text-slate-800 transition-colors group-hover:text-amber-700">
+    <h3 className="mb-3 text-xl font-bold text-zinc-900 transition-colors group-hover:text-amber-700">
       {title}
     </h3>
-    <p className="mb-6 text-sm leading-relaxed text-slate-500">
+    <p className="mb-6 text-sm leading-relaxed text-zinc-700">
       {description}
     </p>
 

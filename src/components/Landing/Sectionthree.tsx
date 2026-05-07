@@ -7,7 +7,7 @@ interface CardProps {
 }
 
 const FeatureCard = ({ image, title, description }: CardProps) => (
-  <div className="group overflow-hidden rounded-xl border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+  <div className="group overflow-hidden rounded-3xl border border-stone-200 bg-white transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
     <div className="relative h-48 w-full overflow-hidden">
       <img 
         src={image} 
@@ -16,11 +16,11 @@ const FeatureCard = ({ image, title, description }: CardProps) => (
       />
     </div>
     <div className="p-6">
-      <h3 className="mb-2 text-xl font-bold text-slate-800">{title}</h3>
-      <p className="text-sm leading-relaxed text-slate-600">
+      <h3 className="mb-2 text-xl font-bold text-zinc-900">{title}</h3>
+      <p className="text-sm leading-relaxed text-zinc-700">
         {description}
       </p>
-      <button className="mt-4 text-sm font-semibold text-blue-600 hover:text-blue-800">
+      <button className="mt-4 text-sm font-semibold text-amber-700 hover:text-amber-800">
         Learn More →
       </button>
     </div>
@@ -47,7 +47,7 @@ export default function RightsSection() {
   ];
 
   return (
-    <section className="relative bg-white py-24 px-4 overflow-hidden">
+    <section className="relative bg-stone-50 py-24 px-4 overflow-hidden">
         <div
         className="absolute inset-0 pointer-events-none opacity-[0.03]"
         style={{
@@ -59,10 +59,10 @@ export default function RightsSection() {
       />
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 text-center">
-          <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-4xl">
             Our Core Initiatives
           </h2>
-          <div className="mx-auto mt-4 h-1 w-24 rounded bg-blue-600"></div>
+          <div className="mx-auto mt-4 h-1 w-24 rounded bg-emerald-700"></div>
         </div>
         
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">

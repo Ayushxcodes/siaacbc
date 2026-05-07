@@ -10,8 +10,8 @@ const OBJECTIVES = [
     title: "Guard & Protect Rights",
     description:
       "Safeguarding the rights and protections provided to Scheduled Castes, Scheduled Tribes, Other Backward Communities and disadvantaged sections of society under the Constitution of India, statutes, schemes and programs of the Centre, States and Union Territories.",
-    accent: "#3b82f6",
-    bg: "#eff6ff",
+    accent: "#14532d",
+    bg: "#ecfdf5",
   },
   {
     id: "02",
@@ -24,8 +24,8 @@ const OBJECTIVES = [
     title: "Promote Education",
     description:
       "Promoting education amongst people of India, essentially the Scheduled Castes, Scheduled Tribes, Other Backward Communities, minorities and disadvantaged sections of society across all levels.",
-    accent: "#8b5cf6",
-    bg: "#f5f3ff",
+    accent: "#92400e",
+    bg: "#fffbeb",
   },
   {
     id: "03",
@@ -39,8 +39,8 @@ const OBJECTIVES = [
     title: "Create Awareness",
     description:
       "Creating awareness about the rights and protections provided to Scheduled Castes, Scheduled Tribes, Other Backward Communities and disadvantaged sections under the Constitution of India, other statutes, and government schemes.",
-    accent: "#10b981",
-    bg: "#ecfdf5",
+    accent: "#9a3412",
+    bg: "#fff5f0",
   },
   {
     id: "04",
@@ -54,14 +54,14 @@ const OBJECTIVES = [
     title: "Assist Government & NGOs",
     description:
       "Assisting functionaries of Government Departments and people of any Non-Governmental Organization working or dedicating themselves for the welfare of Scheduled Castes, Scheduled Tribes, Other Backward Communities and disadvantaged sections of society.",
-    accent: "#f59e0b",
-    bg: "#fffbeb",
+    accent: "#0f3d5a",
+    bg: "#f8fafc",
   },
 ];
 
 export default function ObjectivesSection() {
   return (
-    <section className="relative bg-white py-24 px-4 overflow-hidden">
+    <section className="relative bg-stone-50 py-24 px-4 overflow-hidden">
       {/* Background grid pattern */}
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.03]"
@@ -78,7 +78,7 @@ export default function ObjectivesSection() {
         className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle, rgba(59,130,246,0.06) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(20,83,45,0.04) 0%, transparent 70%)",
         }}
         aria-hidden="true"
       />
@@ -87,20 +87,20 @@ export default function ObjectivesSection() {
         {/* Section header */}
         <div className="text-center mb-20">
           
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0a1628] leading-tight mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-zinc-900 leading-tight mb-4">
             Core Objectives
           </h2>
-          <p className="text-base text-[#0a1628]/50 max-w-xl mx-auto leading-relaxed">
+          <p className="text-base text-zinc-800/60 max-w-xl mx-auto leading-relaxed">
             SIAACBC works across four pillars to ensure constitutional
             protections reach every section of society.
           </p>
           {/* Decorative line */}
           <div className="flex items-center justify-center gap-2 mt-6" aria-hidden="true">
-            <div className="w-8 h-px bg-[#3b82f6]" />
-            <div className="w-2 h-2 rounded-full bg-[#3b82f6]" />
-            <div className="w-20 h-px bg-[#3b82f6]" />
-            <div className="w-2 h-2 rounded-full bg-[#3b82f6]" />
-            <div className="w-8 h-px bg-[#3b82f6]" />
+            <div className="w-8 h-px bg-emerald-700" />
+            <div className="w-2 h-2 rounded-full bg-emerald-700" />
+            <div className="w-20 h-px bg-emerald-700" />
+            <div className="w-2 h-2 rounded-full bg-emerald-700" />
+            <div className="w-8 h-px bg-emerald-700" />
           </div>
         </div>
 
@@ -127,8 +127,7 @@ function ObjectiveCard({
 }) {
   return (
     <article
-      className="group relative bg-white rounded-2xl border border-gray-100 p-8 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-      style={{ boxShadow: "0 2px 16px rgba(0,0,0,0.05)" }}
+      className="group relative bg-white rounded-3xl border border-stone-200 p-8 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
     >
       {/* Top-right number watermark */}
       <span
@@ -148,7 +147,7 @@ function ObjectiveCard({
 
       {/* Icon */}
       <div
-        className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
+        className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110 shadow-sm"
         style={{ background: obj.bg, color: obj.accent }}
       >
         {obj.icon}
@@ -167,13 +166,13 @@ function ObjectiveCard({
         Objective {obj.id}
       </div>
 
-      {/* Title */}
-      <h3 className="text-[18px] font-bold text-[#0a1628] leading-snug mb-3">
+        {/* Title */}
+        <h3 className="text-[18px] font-bold text-zinc-900 leading-snug mb-3">
         {obj.title}
       </h3>
 
-      {/* Description */}
-      <p className="text-[14px] text-[#0a1628]/55 leading-relaxed">
+        {/* Description */}
+        <p className="text-[14px] text-zinc-800/60 leading-relaxed">
         {obj.description}
       </p>
 
