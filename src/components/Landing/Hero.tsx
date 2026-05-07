@@ -63,10 +63,10 @@ const slides = [
 
 const navLinks = [
   { label: "Home", active: true },
-  { label: "About SIAACBC" },
-  { label: "Law Reporter" },
-  { label: "Affirmative Actions" },
-  { label: "Combating Bias Crime" },
+  { label: "AboutSIAACBC" },
+  { label: "LawReporter" },
+  { label: "AffirmativeActions" },
+  { label: "CombatingBiasCrime" },
   { label: "Blogs" },
 ];
 
@@ -123,7 +123,7 @@ export default function HeroSection() {
             <a
               key={link.label}
               href="#"
-              className={`text-[12px] font-medium tracking-[0.12em] transition-colors ${
+              className={`text-[16px] font-medium tracking-[0.12em] transition-colors ${
                 link.active ? "text-slate-900" : "text-slate-500 hover:text-slate-900"
               }`}
             >
@@ -132,13 +132,13 @@ export default function HeroSection() {
           ))}
         </div>
 
-        <div className="flex items-center gap-2">
-          <button className="hidden items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-[12px] font-medium text-slate-700 transition hover:bg-slate-50 sm:flex">
-            <PhoneCall size={14} weight="bold" />
+        <div className="flex items-center gap-4">
+          <button className="hidden items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-50 sm:flex">
+            <PhoneCall size={16} weight="bold" />
             Contact
           </button>
-          <button className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-4 py-2 text-[12px] font-medium text-white transition hover:bg-slate-800">
-            <Heart size={14} weight="bold" />
+          <button className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-5 py-3 text-sm font-medium text-white transition hover:bg-slate-800">
+            <Heart size={16} weight="bold" />
             Donate
           </button>
         </div>
